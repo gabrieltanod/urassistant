@@ -1,2 +1,2 @@
-# urassistant
+# UrAssistant
 Cool reminder app
