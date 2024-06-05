@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminders App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">UrAssistant</div>
+        <div class="slide-bar">
+          <button class="tab-link" onclick="openTab(event, 'reminders')">
+            Reminders
+          </button>
+          <button class="tab-link" onclick="navigateToCalendar() ">
+            <a href="/urassistant-main/UrAssistant/pages/calendar.html"
+              >Calendar</a
+            >
+          </button>
+        </div>
+        <div id="reminders" class="tab-content">
+          <h3>Today's Reminders</h3>
+          <ul id="today-reminders">
+            <!-- Today's reminders will be populated here -->
+          </ul>
+          <h3>Scheduled Reminders</h3>
+          <ul id="scheduled-reminders">
+            <!-- Scheduled reminders will be populated here -->
+          </ul>
+          <h3>All Reminders</h3>
+          <ul id="all-reminders">
+            <!-- All reminders will be populated here -->
+          </ul>
+        </div>
+        <div id="calendar" class="tab-content" style="display: none">
+          <!-- Calendar will be implemented here -->
+        </div>
+      </div>
+      <div class="main-content">
+        <h2>Today's Reminders</h2>
+        <ul id="main-today-reminders">
+          <!-- Main area for today's reminders -->
+        </ul>
+        <button class="add-reminder" onclick="showAddReminderForm()">
+          Add Reminder
+        </button>
+        <div
+          class="add-reminder-form"
+          id="add-reminder-form"
+          style="display: none"
+        >
+          <h3>Add Reminder</h3>
+          <input type="text" id="reminder-title" placeholder="Reminder Title" />
+          <input type="date" id="reminder-date" />
+          <button onclick="addReminder()">Add</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+      function navigateToCalendar() {
+        window.location.href = "pages/calendar.html";
+      }
+    </script>
+  </body>
+</html>
