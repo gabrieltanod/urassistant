@@ -1,2 +1,0 @@
-# UrAssistant
-Cool reminder app
